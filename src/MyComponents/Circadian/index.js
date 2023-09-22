@@ -7,7 +7,7 @@ const Circadian = () => (
     <h1>Circadian Rhythms</h1>
 
     <div className="sub-main">
-      <div>
+      <div className="half">
         <h2>
           The body’s circadian cycles are not designed for
           <Popup
@@ -17,17 +17,22 @@ const Circadian = () => (
           >
             {close => (
               <div className="popup-container">
+                <h2>Side Effects of Binge Watching</h2>
                 <img
                   alt="simpson"
                   className="super-nucleus"
                   src="https://qph.cf2.quoracdn.net/main-qimg-8c8ee01593477a892ada79b3f7fc313a-lq"
                 />
                 <ul className="un-ol-list">
-                  <li>WEIGHT GAIN</li>
-                  <li>FLUCTUATIONS IN SLEEP CYCLE</li>
-                  <li>HEART BURN AND ACID REFLUX</li>
+                  <li className="li-item">WEIGHT GAIN</li>
+                  <li className="li-item">FLUCTUATIONS IN SLEEP CYCLE</li>
+                  <li className="li-item">HEART BURN AND ACID REFLUX</li>
                 </ul>
-                <button type="button" onClick={() => close()}>
+                <button
+                  className="close-btn-styles"
+                  type="button"
+                  onClick={() => close()}
+                >
                   Close
                 </button>
               </div>
@@ -42,7 +47,7 @@ const Circadian = () => (
         </h3>
       </div>
 
-      <div>
+      <div className="half">
         <h2>Circadian Rhythms and Body Clock</h2>
         <h3>
           Here's how our circadian rhythms work. They're the natural physical,
