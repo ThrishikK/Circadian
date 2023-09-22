@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  color: #1e1e1e;
+  background-image: linear-gradient(135deg, white, lightgreen, darkblue);
+  text-align: center;
+}
+
+.sub-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.super-nucleus {
+  height: 270px;
+  width: 306px;
+  border-radius: 18px;
+}
+
+.popup-word {
+  color: #3c8fc2;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 75vw;
+  height: 75vh;
+}
+
+.un-ol-list {
+  list-style-type: none;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
