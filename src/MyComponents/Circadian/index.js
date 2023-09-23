@@ -4,7 +4,7 @@ import './index.css'
 
 const Circadian = () => (
   <div className="main">
-    <h1>Circadian Rhythms</h1>
+    <h1 className="main-heading-element">Circadian Rhythms</h1>
 
     <div className="sub-main">
       <div className="half">
@@ -50,29 +50,45 @@ const Circadian = () => (
       <div className="half">
         <h2>Circadian Rhythms and Body Clock</h2>
         <h3>
-          Here's how our circadian rhythms work. They're the natural physical,
+          Here is how our circadian rhythms work. They are the natural physical,
           mental, and behavioral changes that happen in the body, and they
           follow a 24-hour cycle.
         </h3>
         <h3>
           The body also has one master internal clock, Dr. Wright says. That
           clock is housed in the brain’s hypothalamus (above the optic nerve);
-          it’s called the{' '}
-          <span className="popup-word">Suprachiasmatic nucleus</span>{' '}
+          it’s called the
         </h3>
-        <img
-          className="super-nucleus"
-          alt="Suprachiasmatic_Nucleus"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Suprachiasmatic_Nucleus.jpg/1024px-Suprachiasmatic_Nucleus.jpg"
-        />
-        <h3>
-          The master clock takes its cues from the lightness or darkness we’re
-          exposed to (the fact that these cells live near the eyes is not a
-          coincidence — the cells receive direct input from the eyes). And the
-          master clock coordinates the body’s other clocks by regulating things
-          like body temperature and hormone levels, which in turn trigger the
-          molecular clocks in individual cells.
-        </h3>
+        <Popup
+          modal
+          trigger={<h2 className="popup-word">Suprachiasmatic nucleus</h2>}
+          className="popup-content-2"
+        >
+          {close => (
+            <div className="popup-container">
+              <img
+                className="super-nucleus"
+                alt="Suprachiasmatic_Nucleus"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Suprachiasmatic_Nucleus.jpg/1024px-Suprachiasmatic_Nucleus.jpg"
+              />
+              <h3>
+                The master clock takes its cues from the lightness or darkness
+                we’re exposed to (the fact that these cells live near the eyes
+                is not a coincidence — the cells receive direct input from the
+                eyes). And the master clock coordinates the body’s other clocks
+                by regulating things like body temperature and hormone levels,
+                which in turn trigger the molecular clocks in individual cells.
+              </h3>
+              <button
+                className="close-btn-styles"
+                type="button"
+                onClick={() => close()}
+              >
+                Close
+              </button>
+            </div>
+          )}
+        </Popup>
       </div>
     </div>
   </div>
